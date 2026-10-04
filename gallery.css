@@ -1,0 +1,4 @@
+.gallery { border: 1px solid #ccc; background: white; transition: border-color .15s ease; }
+.gallery:hover, .gallery:focus-within { border-color: #777; }
+.gallery img { display: block; aspect-ratio: 3 / 2; object-fit: cover; }
+.gallery a:focus-visible { display: block; outline: 3px solid #0d6efd; outline-offset: 2px; }
