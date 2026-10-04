@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+</head>
+<body class="text-center">
+    <form class="form-signin" id="login-form">
+        <img class="mb-4" src="bootstrap.svg" alt="Bootstrap" width="72" height="72">
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <label for="inputEmail" class="visually-hidden">Email address</label>
+        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" autocomplete="username" required autofocus>
+        <label for="inputPassword" class="visually-hidden">Password</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" autocomplete="current-password" required>
+        <div class="checkbox mb-3">
+            <label><input type="checkbox" id="rememberMe" name="remember-me"> Remember me</label>
+        </div>
+        <button class="btn btn-lg btn-primary w-100" type="submit">Sign in</button>
+        <div id="message" class="alert alert-info mt-3 mb-0" role="status" hidden></div>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const message = document.getElementById('message');
+            message.textContent = 'Demo form: validation passed. No account was signed in.';
+            message.hidden = false;
+            document.getElementById('inputPassword').value = '';
+        });
+    </script>
+</body>
+</html>
